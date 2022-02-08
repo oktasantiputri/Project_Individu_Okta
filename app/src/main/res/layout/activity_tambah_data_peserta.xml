@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".TambahDataPesertaActivity">
+
+    <EditText
+        android:id="@+id/add_id_pst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="id"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/add_nama_pst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nama Peserta"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/add_email_pst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email Peserta"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/add_hp_pst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nomor HP Peserta"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/add_ins_pst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Asal Instansi: "
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgInsPst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radbut_instansi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instansi" />
+
+        <RadioButton
+            android:id="@+id/radbut_personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/add_nama_ins_pst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nama Instansi"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btn_simpan_pst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="simpan" />
+
+</LinearLayout>
