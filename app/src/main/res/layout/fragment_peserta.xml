@@ -7,8 +7,17 @@
     android:orientation="vertical"
     tools:context=".ui.home.PesertaFragment" >
 
+    <Button
+        android:id="@+id/btn_tambah_peserta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Peserta" />
+
     <ListView
         android:id="@+id/list_view_peserta"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" >
+
+    </ListView>
+
 </LinearLayout>

@@ -3,23 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_peserta">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_peserta"
         android:name="com.example.projectindvokta.ui.home.PesertaFragment"
         android:label="Peserta"
         tools:layout="@layout/fragment_peserta" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.projectindvokta.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_instruktur"
+        android:name="com.example.projectindvokta.ui.gallery.InstrukturFragment"
+        android:label="Instruktur"
+        tools:layout="@layout/fragment_instruktur" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_materi"
         android:name="com.example.projectindvokta.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:label="Materi"
+        tools:layout="@layout/fragment_materi" />
+    <fragment
+        android:id="@+id/nav_Kelas"
+        android:name="com.example.projectindvokta.ui.slideshow.SlideshowFragment"
+        android:label="Kelas"
+        tools:layout="@layout/fragment_materi" />
 </navigation>

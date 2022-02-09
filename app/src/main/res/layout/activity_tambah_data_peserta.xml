@@ -8,13 +8,15 @@
     android:padding="16dp"
     tools:context=".TambahDataPesertaActivity">
 
-    <EditText
-        android:id="@+id/add_id_pst"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/judul_tambah_pst"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="id"
-        android:inputType="textPersonName" />
+        android:layout_marginTop="10dp"
+        android:text="Tambah Peserta"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/add_nama_pst"
@@ -40,46 +42,32 @@
         android:hint="Nomor HP Peserta"
         android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/add_ins_pst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Asal Instansi: "
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <RadioGroup
-        android:id="@+id/rgInsPst"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/radbut_instansi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Instansi" />
-
-        <RadioButton
-            android:id="@+id/radbut_personal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Personal" />
-    </RadioGroup>
-
     <EditText
         android:id="@+id/add_nama_ins_pst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nama Instansi"
+        android:hint="Asal Instansi"
         android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/btn_simpan_pst"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="simpan" />
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_simpan_pst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="simpan peserta" />
+
+        <Button
+            android:id="@+id/btn_lihat_pst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lihat Peserta" />
+    </LinearLayout>
 
 </LinearLayout>

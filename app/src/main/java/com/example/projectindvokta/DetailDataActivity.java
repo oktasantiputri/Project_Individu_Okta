@@ -81,6 +81,8 @@ public class DetailDataActivity extends AppCompatActivity implements View.OnClic
                 super.onPostExecute(message);
                 loading.dismiss();
                 displayDetailData(message);
+                Toast.makeText(DetailDataActivity.this, "Data " + message,
+                        Toast.LENGTH_SHORT).show();
             }
         }
         GetJSON getJSON = new GetJSON();
@@ -99,7 +101,7 @@ public class DetailDataActivity extends AppCompatActivity implements View.OnClic
             String nama_pst =object.getString(Konfigurasi.TAG_JSON_NAMA_PST);
             String email_pst = object.getString(Konfigurasi.TAG_JSON_EMAIL_PST);
             String hp_pst = object.getString(Konfigurasi.TAG_JSON_HP_PST);
-            String ins_pst = object.getString(Konfigurasi.TAG_JSON_INSTANSI_PST);
+            String ins_pst = object.getString(Konfigurasi.TAG_JSON_INS_PST);
 
             txt_dis_nama_pst.setText(nama_pst);
             txt_dis_email_pst.setText(email_pst);

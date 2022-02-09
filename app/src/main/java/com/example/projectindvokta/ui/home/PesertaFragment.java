@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -24,7 +25,8 @@ import com.example.projectindvokta.DetailDataActivity;
 import com.example.projectindvokta.HttpHandler;
 import com.example.projectindvokta.Konfigurasi;
 import com.example.projectindvokta.R;
-import com.example.projectindvokta.databinding.FragmentPesertaBinding;
+import com.example.projectindvokta.TambahDataPesertaActivity;
+//import com.example.projectindvokta.databinding.FragmentPesertaBinding;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,6 +37,8 @@ import java.util.HashMap;
 
 public class PesertaFragment extends Fragment implements AdapterView.OnItemClickListener {
     private String JSON_STRING;
+    Button btn_tambah_peserta;
+
 
     ListView list_view_pst;
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -44,6 +48,17 @@ public class PesertaFragment extends Fragment implements AdapterView.OnItemClick
         list_view_pst = view.findViewById(R.id.list_view_peserta);
 
         list_view_pst.setOnItemClickListener(this);
+
+        btn_tambah_peserta = view.findViewById(R.id.btn_tambah_peserta);
+        btn_tambah_peserta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(getActivity(),TambahDataPesertaActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         getJSON();
         return view;
