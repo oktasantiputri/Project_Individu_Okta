@@ -12,10 +12,10 @@ public class Konfigurasi
 
     //INSTRUKTUR
     public static final String URL_GET_ALL_INSTRUKTUR = "http://192.168.100.7/inixtraining/instruktur/tr_datas_instruktur.php";
-    public static final String URL_GET_DETAIL_INSTRUKTUR = "http://192.168.100.7/inixtraining/instruktur/tr_detail_instruktur.php?id_pst=";
+    public static final String URL_GET_DETAIL_INSTRUKTUR = "http://192.168.100.7/inixtraining/instruktur/tr_detail_instruktur.php?id_ins=";
     public static final String URL_ADD_INSTRUKTUR = "http://192.168.100.7/inixtraining/instruktur/tr_add_instruktur.php";
-    public static final String URL_UPDATE_INSTRUKTUR = "http://192.168.100.7/inixtraining/instruktur/tr_update_instruktur.php?id_pst=";
-    public static final String URL_DELETE_INSTRUKTUR = "http://192.168.100.7/inixtraining/instruktur/tr_delete_instruktur.php?id_pst=";
+    public static final String URL_UPDATE_INSTRUKTUR = "http://192.168.100.7/inixtraining/instruktur/tr_update_instruktur.php?id_ins=";
+    public static final String URL_DELETE_INSTRUKTUR = "http://192.168.100.7/inixtraining/instruktur/tr_delete_instruktur.php?id_ins=";
 
     // key and value JSON yang muncul di browser
     //PESERTA
@@ -26,10 +26,10 @@ public class Konfigurasi
     public static final String KEY_PST_INSTANSI = "instansi_pst";
 
     //INSTRUKTUR
-    public static final String KEY_INS_ID = "id_pst";
-    public static final String KEY_INS_NAMA = "nama_pst";
-    public static final String KEY_INS_EMAIL = "email_pst";
-    public static final String KEY_INS_HP = "hp_pst";
+    public static final String KEY_INS_ID = "id_ins";
+    public static final String KEY_INS_NAMA = "nama_ins";
+    public static final String KEY_INS_EMAIL = "email_ins";
+    public static final String KEY_INS_HP = "hp_ins";
 
 
     // flag JSON
@@ -43,12 +43,13 @@ public class Konfigurasi
 
     //INSTRUKTUR
     public static final String TAG_JSON_INS_ARRAY = "result";
-    public static final String TAG_JSON_ID_INS = "id_pst";
-    public static final String TAG_JSON_NAMA_INS = "nama_pst";
-    public static final String TAG_JSON_EMAIL_INS = "email_pst";
-    public static final String TAG_JSON_HP_INS = "hp_pst";
+    public static final String TAG_JSON_ID_INS = "id_ins";
+    public static final String TAG_JSON_NAMA_INS = "nama_ins";
+    public static final String TAG_JSON_EMAIL_INS = "email_ins";
+    public static final String TAG_JSON_HP_INS = "hp_ins";
 
 
     // variabel ID peserta
     public static final String PST_ID = "id_pst";
+    public static final String INS_ID = "id_ins";
 }

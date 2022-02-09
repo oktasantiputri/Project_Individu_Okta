@@ -5,22 +5,22 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/txt_id_pst"
+        android:id="@+id/txt_id_ins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="TextView"
-        android:textColor="#770707"
+        android:textColor="#780505"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/txt_nama_pst"
+        android:id="@+id/txt_nama_ins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="TextView"
-        android:textColor="#770707"
+        android:textColor="#780505"
         android:textSize="20sp"
         android:textStyle="bold" />
 </LinearLayout>

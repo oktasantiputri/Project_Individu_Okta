@@ -21,9 +21,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-import java.util.Locale;
 
-public class DetailDataActivity extends AppCompatActivity implements View.OnClickListener {
+public class DetailDataPesertaActivity extends AppCompatActivity implements View.OnClickListener {
     EditText txt_dis_id_pst, txt_dis_nama_pst, txt_dis_email_pst, txt_dis_hp_pst,
     txt_dis_ins_pst;
     Button btn_edit_pst, btn_delete_pst;
@@ -33,7 +32,10 @@ public class DetailDataActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_data);
+        setContentView(R.layout.activity_detail_data_peserta);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Detail Data Peserta");
 
         txt_dis_id_pst = findViewById(R.id.txt_dis_id_pst);
         txt_dis_nama_pst = findViewById(R.id.txt_dis_nama_pst);
@@ -63,7 +65,7 @@ public class DetailDataActivity extends AppCompatActivity implements View.OnClic
             protected void onPreExecute()
             {
                 super.onPreExecute();
-                loading = ProgressDialog.show(DetailDataActivity.this, "Memuat Data",
+                loading = ProgressDialog.show(DetailDataPesertaActivity.this, "Memuat Data",
                         "Harap Menunggu", false, false);
             }
 
@@ -81,7 +83,7 @@ public class DetailDataActivity extends AppCompatActivity implements View.OnClic
                 super.onPostExecute(message);
                 loading.dismiss();
                 displayDetailData(message);
-                Toast.makeText(DetailDataActivity.this, "Data " + message,
+                Toast.makeText(DetailDataPesertaActivity.this, "Data " + message,
                         Toast.LENGTH_SHORT).show();
             }
         }
@@ -162,7 +164,7 @@ public class DetailDataActivity extends AppCompatActivity implements View.OnClic
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(DetailDataActivity.this, "Menghapus Data",
+                loading = ProgressDialog.show(DetailDataPesertaActivity.this, "Menghapus Data",
                         "Harap menunggu...",false,false);
             }
 
@@ -170,16 +172,16 @@ public class DetailDataActivity extends AppCompatActivity implements View.OnClic
             protected String doInBackground(Void... voids) {
                 HttpHandler handler = new HttpHandler();
                 String hasil = handler.sendGetResponse(Konfigurasi.URL_DELETE_PESERTA,id_pst);
-                return null;
+                return hasil;
             }
 
             @Override
             protected void onPostExecute(String message) {
                 super.onPostExecute(message);
                 loading.dismiss();
-                Toast.makeText(DetailDataActivity.this, "Hapus " + message,
+                Toast.makeText(DetailDataPesertaActivity.this, "Hapus " + message,
                         Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(DetailDataActivity.this, PesertaFragment.class));
+                startActivity(new Intent(DetailDataPesertaActivity.this, PesertaFragment.class));
             }
         }
         DeleteDataPeserta deleteDataPeserta = new DeleteDataPeserta();
@@ -199,7 +201,7 @@ public class DetailDataActivity extends AppCompatActivity implements View.OnClic
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(DetailDataActivity.this, "Memperbaharui Data",
+                loading = ProgressDialog.show(DetailDataPesertaActivity.this, "Memperbaharui Data",
                         "Harap tunggu...", false, false);
             }
 
@@ -223,9 +225,9 @@ public class DetailDataActivity extends AppCompatActivity implements View.OnClic
             protected void onPostExecute(String message) {
                 super.onPostExecute(message);
                 loading.dismiss();
-                Toast.makeText(DetailDataActivity.this, "pesan: " + message,
+                Toast.makeText(DetailDataPesertaActivity.this, "pesan: " + message,
                         Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(DetailDataActivity.this, PesertaFragment.class));
+                startActivity(new Intent(DetailDataPesertaActivity.this, PesertaFragment.class));
             }
         }
         UpdateDataPeserta updateDataPeserta = new UpdateDataPeserta();

@@ -13,10 +13,16 @@
         android:theme="@style/Theme.ProjectIndvOkta"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DetailDataInstrukturActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TambahDataInstrukturActivity"
+            android:exported="false" />
+        <activity
             android:name=".TambahDataPesertaActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailDataActivity"
+            android:name=".DetailDataPesertaActivity"
             android:exported="false" />
         <activity
             android:name=".NavDrawerActivity"

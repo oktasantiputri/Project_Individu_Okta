@@ -8,20 +8,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.projectindvokta.DetailDataActivity;
+import com.example.projectindvokta.DetailDataPesertaActivity;
 import com.example.projectindvokta.HttpHandler;
 import com.example.projectindvokta.Konfigurasi;
 import com.example.projectindvokta.R;
@@ -144,7 +140,7 @@ public class PesertaFragment extends Fragment implements AdapterView.OnItemClick
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
-        Intent intent = new Intent(getActivity(), DetailDataActivity.class);
+        Intent intent = new Intent(getActivity(), DetailDataPesertaActivity.class);
         HashMap<String, String> map = (HashMap) parent.getItemAtPosition(position);
         String pstId = map.get(Konfigurasi.TAG_JSON_ID_PST).toString();
         intent.putExtra(Konfigurasi.PST_ID, pstId);

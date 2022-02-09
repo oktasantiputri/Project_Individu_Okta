@@ -5,28 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="5dp"
-    tools:context=".DetailDataActivity">
+    android:padding="16dp"
+    tools:context=".DetailDataInstrukturActivity">
 
-    <EditText
-        android:id="@+id/txt_dis_id_pst"
+    <TextView
+        android:id="@+id/page_edit_ins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:editable="false"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
+        android:text="Data Instruktur"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/txt_dis_nama_pst"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
-
-    <EditText
-        android:id="@+id/txt_dis_email_pst"
+        android:id="@+id/txt_dis_id_ins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -34,7 +26,7 @@
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/txt_dis_hp_pst"
+        android:id="@+id/txt_dis_nama_ins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -42,7 +34,15 @@
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/txt_dis_ins_pst"
+        android:id="@+id/txt_dis_email_ins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/txt_dis_hp_ins"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -52,23 +52,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center|top"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <Button
-            android:id="@+id/btn_edit_pst"
+            android:id="@+id/btn_edit_ins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:gravity="center"
-            android:text="Edit Peserta" />
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="Edit Instruktur" />
 
         <Button
-            android:id="@+id/btn_delete_pst"
+            android:id="@+id/btn_del_ins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Delete Peserta" />
+            android:layout_weight="1"
+            android:text="Delete Instruktur" />
     </LinearLayout>
-
 </LinearLayout>
