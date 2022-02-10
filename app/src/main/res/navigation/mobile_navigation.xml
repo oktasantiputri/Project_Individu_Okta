@@ -3,8 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_peserta">
+    app:startDestination="@+id/nav_start">
 
+    <fragment
+        android:id="@+id/nav_start"
+        android:name="com.example.projectindvokta.StartPageFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_start_page" />
     <fragment
         android:id="@+id/nav_peserta"
         android:name="com.example.projectindvokta.ui.home.PesertaFragment"
@@ -19,12 +24,8 @@
 
     <fragment
         android:id="@+id/nav_materi"
-        android:name="com.example.projectindvokta.ui.slideshow.SlideshowFragment"
+        android:name="com.example.projectindvokta.MateriFragment"
         android:label="Materi"
         tools:layout="@layout/fragment_materi" />
-    <fragment
-        android:id="@+id/nav_Kelas"
-        android:name="com.example.projectindvokta.ui.slideshow.SlideshowFragment"
-        android:label="Kelas"
-        tools:layout="@layout/fragment_materi" />
+
 </navigation>

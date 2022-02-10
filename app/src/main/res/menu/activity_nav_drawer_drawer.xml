@@ -13,8 +13,12 @@
             android:icon="@drawable/ic_trainer"
             android:title="Instruktur" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_materi"
+            android:icon="@drawable/ic_theory"
+            android:title="Materi" />
+        <item
+            android:id="@+id/nav_kelas"
+            android:icon="@drawable/ic_class"
+            android:title="Kelas" />
     </group>
 </menu>

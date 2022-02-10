@@ -38,12 +38,13 @@ public class DetailDataInstrukturActivity extends AppCompatActivity implements V
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Detail Data Instruktur");
 
-        txt_dis_id_ins = findViewById(R.id.txt_dis_id_pst);
+        txt_dis_id_ins = findViewById(R.id.txt_dis_id_ins);
         txt_dis_nama_ins = findViewById(R.id.txt_dis_nama_ins);
-        txt_dis_email_ins = findViewById(R.id.txt_dis_email_pst);
+        txt_dis_email_ins = findViewById(R.id.txt_dis_email_ins);
         txt_dis_hp_ins = findViewById(R.id.txt_dis_hp_ins);
         btn_edit_ins = findViewById(R.id.btn_edit_ins);
         btn_del_ins = findViewById(R.id.btn_del_ins);
+        page_edit_ins = findViewById(R.id.page_edit_ins);
 
         Intent terimaIntent =getIntent();
         id_ins = terimaIntent.getStringExtra(Konfigurasi.INS_ID);
